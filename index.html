@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Weather App</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🌦️ Pro Weather Dashboard</h1>
+      <div class="controls">
+        <input type="text" id="city" placeholder="Enter city name (e.g. Delhi)">
+        <button onclick="getWeatherByCity()">Search</button>
+        <button id="current-loc">📍 My Location</button>
+        <button id="toggle-dark">🌙 Dark Mode</button>
+      </div>
+    </header>
+
+    <div class="main-content">
+      <div id="current-weather" class="weather-card">
+        <div id="current-loading">Click search or location</div>
+      </div>
+
+      <div id="forecast-section">
+        <h3>Hourly Forecast (Next 24h)</h3>
+        <div id="hourly-forecast"></div>
+      </div>
+    </div>
+
+    <div id="map" class="map-container"></div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
